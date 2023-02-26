@@ -1,0 +1,1196 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta https-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Aaftab's Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Switch Icons -->
+	<link rel="stylesheet" href="css/switch.css">
+	<!-- Vanilla toast css -->
+	<link rel="stylesheet" type="text/css" href="css/vanilla-toast.css">
+	<!-- Switch Icon API-->
+	<script src="https://kit.fontawesome.com/9680114bd9.js" crossorigin="anonymous"></script>
+	<!-- Captcha -->
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<!-- Emailjs integration -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	<script type="text/javascript">
+		(function () {
+			// https://dashboard.emailjs.com/admin/account
+			emailjs.init('W96TxgqkIJiF9QRMc');
+		})();
+	</script>
+	<script type="text/javascript">
+		window.onload = function () {
+			document.getElementById('contact-form').addEventListener('submit', function (event) {
+				event.preventDefault();
+				// generate a five digit number for the contact_number variable
+				this.contact_number.value = Math.random() * 100000 | 0;
+				// these IDs from the previous steps
+				emailjs.sendForm('service_dehzxyh', 'template_7ac8jmp', this)
+					.then(function () {
+						vanillaToast.success('Message successfully sent', {
+							duration: 2000,
+							fadeDuration: 400
+						});
+						document.getElementById('contact-form').reset();
+						grecaptcha.reset();
+						console.log('SUCCESS!');
+					}, function (error) {
+						vanillaToast.error(
+							'Message failure. Please contact me by phone or email instead. Thank you', {
+								duration: 1000,
+								fadeDuration: 300,
+								closeButton: false
+							});
+						console.log('FAILED...', error);
+					});
+			});
+		}
+	</script>
+
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+	<div id="colorlib-page">
+		<div class="container-wrap">
+			<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar"
+				aria-expanded="false" aria-controls="navbar"><i></i></a>
+			<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+				<div class="text-center">
+					<div class="author-img" style="background-image: url(images/AT.jpg );"></div>
+					<h1 id="colorlib-logo"><a href="index.html">Aaftab Tamboli</a></h1>
+					<span class="position">Student</span>
+				</div>
+				<nav id="colorlib-main-menu" role="navigation" class="navbar">
+					<div id="navbar" class="collapse">
+						<ul>
+							<li class="active"><a id="home" href="#" data-nav-section="home">Home</a></li>
+							<li><a id="about" href="#" data-nav-section="about">About</a></li>
+							<li><a id="services" href="#" data-nav-section="services">Services</a></li>
+							<li><a id="skills" href="#" data-nav-section="skills">Skills</a></li>
+							<li><a id="education" href="#" data-nav-section="education">Education</a></li>
+							<li><a id="certifications" href="#" data-nav-section="certifications">Certifications</a>
+							</li>
+							<!--<li><a id="experience" href="#" data-nav-section="experience">Experience</a></li>-->
+							<li><a id="references" href="#" data-nav-section="references">References</a></li>
+							<!--<li><a id="work" href="#" data-nav-section="work">Portfolio</a></li>-->
+							<!--<li><a id="orgs" href="#" data-nav-section="orgs">Organizations</a></li>-->
+							<li><a id="contact" href="#" data-nav-section="contact">Contact</a></li>
+						</ul>
+					</div>
+				</nav>
+
+				<div class="colorlib-footer">
+					<p><small>&copy;
+							Copyright &copy;
+							<script>
+								document.write(new Date().getFullYear());
+							</script> All rights reserved
+						</small></p>
+					<ul>
+						<li><a href="https://katedevblog.com/"><i class="icon-blogger"></i></a></li>
+						<li><a href="https://github.com/ksoliven"><i class="icon-github"></i></a></li>
+						<li><a href="https://www.instagram.com/kmoxxi/"><i class="icon-instagram"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/kate-soliven-949706100"><i
+									class="icon-linkedin2"></i></a></li>
+					</ul>
+				</div>
+			</aside>
+
+			<div id="colorlib-main">
+				<section id="colorlib-hero" class="js-fullheight" data-section="home">
+					<div class="flexslider js-fullheight">
+						<ul class="slides">
+							<li style="background-image: url(images/cherry-4.png);">
+								<div class="overlay"></div>
+								<div class="container-fluid">
+									<div class="row">
+										<div
+											class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+											<div class="slider-text-inner js-fullheight">
+												<div class="desc">
+													<h1>Hi!<br>I'm Aaftab</h1>
+													<p><a class="btn btn-primary btn-learn"
+															href="documents/ksoliven_resume.pdf"
+															download="Resume">Download Resume&nbsp;<i
+																class="icon-download4"></i></a></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li style="background-image: url(images/clean-bg.png);">
+								<div class="overlay"></div>
+								<div class="container-fluid">
+									<div class="row">
+										<div
+											class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+											<div class="slider-text-inner">
+												<div class="desc">
+													<h1>I'm<br>a Student</h1>
+													<p><a class="btn btn-primary btn-learn"
+															href="https://github.com/ksoliven">View Portfolio <i
+																class="icon-briefcase3"></i></a></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="colorlib-about" data-section="about">
+					<div class="colorlib-narrow-content">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+									<div class="col-md-12">
+										<div class="about-desc">
+											<span class="heading-meta">About Me</span>
+											<h2 class="colorlib-heading">Who Am I?</h2>
+											<p><strong>Hi I'm Aaftab Ali Tamboli</strong>. My name is Aaftab. 
+												 Pleasure to meet you!.</p>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+										<div class="services color-1">
+											<span class="icon2"><i class="icon-bulb"></i></span>
+											<h3>Graphic Design</h3>
+										</div>
+									</div>
+									<div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
+										<div class="services color-2">
+											<span class="icon2"><i class="icon-globe-outline"></i></span>
+											<h3>Web Design</h3>
+										</div>
+									</div>
+									<div class="col-md-3 animate-box" data-animate-effect="fadeInTop">
+										<div class="services color-3">
+											<span class="icon2"><i class="icon-data"></i></span>
+											<h3>Software</h3>
+										</div>
+									</div>
+									<div class="col-md-3 animate-box" data-animate-effect="fadeInBottom">
+										<div class="services color-4">
+											<span class="icon2"><i class="icon-phone3"></i></span>
+											<h3>Application</h3>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+										<div class="hire">
+											<h2>Pleasure to meet you!<br>30 projects completed successfully!</h2>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="colorlib-services" data-section="services">
+					<div class="colorlib-narrow-content">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+								data-animate-effect="fadeInLeft">
+								<span class="heading-meta">What I do?</span>
+								<h2 class="colorlib-heading">Here are some of my expertise</h2>
+							</div>
+						</div>
+						<div class="row row-pt-md">
+							<div class="col-md-4 text-center animate-box">
+								<div class="services color-1">
+									<span class="icon">
+										<i class="icon-bulb"></i>
+									</span>
+									<div class="desc">
+										<h3>Quality Assurance</h3>
+										<p>Functional analysis and testing.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 text-center animate-box">
+								<div class="services color-2">
+									<span class="icon">
+										<i class="icon-data"></i>
+									</span>
+									<div class="desc">
+										<h3>Software</h3>
+										<p>Learned 5 Languages so far..</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 text-center animate-box">
+								<div class="services color-3">
+									<span class="icon">
+										<i class="icon-phone3"></i>
+									</span>
+									<div class="desc">
+										<h3>Application</h3>
+										<p>Developed real life applications</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 text-center animate-box">
+								<div class="services color-4">
+									<span class="icon">
+										<i class="icon-layers2"></i>
+									</span>
+									<div class="desc">
+										<h3>Web Development</h3>
+										<p>I design and develop responsive websites with a focus on user-friendliness, using HTML, CSS, and JavaScript..</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 text-center animate-box">
+								<div class="services color-5">
+									<span class="icon">
+										<i class="icon-data"></i>
+									</span>
+									<div class="desc">
+										<h3>Project Management</h3>
+										<p>Worked in College Enviroment as project lead.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 text-center animate-box">
+								<div class="services color-6">
+									<span class="icon">
+										<i class="icon-phone3"></i>
+									</span>
+									<div class="desc">
+										<h3>SharePoint</h3>
+										<p>Managed team SharePoints for overall development flow.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div id="colorlib-counter" class="colorlib-counters"
+					style="background-image: url(images/washingtondc_copy.jpg);" data-stellar-background-ratio="0.5">
+					<div class="overlay"></div>
+					<div class="colorlib-narrow-content">
+						<div class="row">
+						</div>
+						<div class="row">
+							<div class="col-md-3 text-center animate-box">
+								<span class="colorlib-counter js-counter" data-from="0" data-to="500"
+									data-speed="5000" data-refresh-interval="50"></span>
+								<span class="colorlib-counter-label">Time Spent on Projects</span>
+							</div>
+							<div class="col-md-3 text-center animate-box">
+								<span class="colorlib-counter js-counter" data-from="0" data-to="5" data-speed="5000"
+									data-refresh-interval="50"></span>
+								<span class="colorlib-counter-label">Projects</span>
+							</div>
+							<div class="col-md-3 text-center animate-box">
+								<span class="colorlib-counter js-counter" data-from="0" data-to="5" data-speed="5000"
+									data-refresh-interval="50"></span>
+								<span class="colorlib-counter-label">Semester Completed</span>
+							</div>
+							<div class="col-md-3 text-center animate-box">
+								<span class="colorlib-counter js-counter" data-from="0" data-to="4" data-speed="5000"
+									data-refresh-interval="50"></span>
+								<span class="colorlib-counter-label">Web Applications</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<section class="colorlib-skills" data-section="skills">
+					<div class="colorlib-narrow-content">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+								data-animate-effect="fadeInLeft">
+								<span class="heading-meta">My Specialty</span>
+								<h2 class="colorlib-heading animate-box">My Skills</h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft"> 
+								<p>I have experience with Agile development as well as System Engineering. I'm currently
+									a Staff Engineer at Booz Allen Hamilton coding in Javascript, jQuery and
+									Angular. Check out
+									some of my skills below.</p>
+							</div>
+							<br>
+							<!-- Languages -->
+							<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+								<h2 class="colorlib-heading animate-box">Languages</h2>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+								<div class="progress-wrap">
+									<h3>C#</h3>
+									<div class="progress">
+										<div class="progress-bar color-1" role="progressbar" aria-valuenow="75"
+											aria-valuemin="0" aria-valuemax="100" style="width:75%">
+											<span>75%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+								<div class="progress-wrap">
+									<h3>CSS</h3>
+									<div class="progress">
+										<div class="progress-bar color-2" role="progressbar" aria-valuenow="90"
+											aria-valuemin="0" aria-valuemax="100" style="width:90%">
+											<span>90%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+								<div class="progress-wrap">
+									<h3>CSS3</h3>
+									<div class="progress">
+										<div class="progress-bar color-3" role="progressbar" aria-valuenow="90"
+											aria-valuemin="0" aria-valuemax="100" style="width:90%">
+											<span>90%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+								<div class="progress-wrap">
+									<h3>HTML5</h3>
+									<div class="progress">
+										<div class="progress-bar color-4" role="progressbar" aria-valuenow="85"
+											aria-valuemin="0" aria-valuemax="100" style="width:85%">
+											<span>85%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+								<div class="progress-wrap">
+									<h3>Python</h3>
+									<div class="progress">
+										<div class="progress-bar color-6" role="progressbar" aria-valuenow="50"
+											aria-valuemin="0" aria-valuemax="100" style="width:50%">
+											<span>50%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Developer Tools -->
+							<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+								<h2 class="colorlib-heading animate-box">Developer Tools</h2>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+								<div class="progress-wrap">
+									<h3>Atom</h3>
+									<div class="progress">
+										<div class="progress-bar color-5" role="progressbar" aria-valuenow="80"
+											aria-valuemin="0" aria-valuemax="100" style="width:80%">
+											<span>80%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+								<div class="progress-wrap">
+									<h3>Github</h3>
+									<div class="progress">
+										<div class="progress-bar color-2" role="progressbar" aria-valuenow="80"
+											aria-valuemin="0" aria-valuemax="100" style="width:80%">
+											<span>80%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+								<div class="progress-wrap">
+									<h3>Visual Studio Code</h3>
+									<div class="progress">
+										<div class="progress-bar color-5" role="progressbar" aria-valuenow="90"
+											aria-valuemin="0" aria-valuemax="100" style="width:90%">
+											<span>90%</span>
+										</div>
+									</div>
+								</div>
+								<br>
+							</div>
+							<br>
+							<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+								<h2 class="colorlib-heading animate-box">Database</h2>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+								<div class="progress-wrap">
+									<h3>MongoDB</h3>
+									<div class="progress">
+										<div class="progress-bar color-6" role="progressbar" aria-valuenow="75"
+											aria-valuemin="0" aria-valuemax="100" style="width:75%">
+											<span>75%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+								<div class="progress-wrap">
+									<h3>mySQL</h3>
+									<div class="progress">
+										<div class="progress-bar color-1" role="progressbar" aria-valuenow="70"
+											aria-valuemin="0" aria-valuemax="100" style="width:70%">
+											<span>70%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Productivity Programs -->
+							<div class="col-md-12 animate-box" data-animate-effect="fadeInRight">
+								<h2 class="colorlib-heading animate-box">Productivity Programs</h2>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+								<div class="progress-wrap">
+									<h3>Microsoft Office</h3>
+									<div class="progress">
+										<div class="progress-bar color-1" role="progressbar" aria-valuenow="70"
+											aria-valuemin="0" aria-valuemax="100" style="width:70%">
+											<span>70%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+								<div class="progress-wrap">
+									<h3>Miro board</h3>
+									<div class="progress">
+										<div class="progress-bar color-2" role="progressbar" aria-valuenow="70"
+											aria-valuemin="0" aria-valuemax="100" style="width:70%">
+											<span>70%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				</section>
+				<!-- Education -->
+				<section class="colorlib-education" data-section="education">
+					<div class="colorlib-narrow-content">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+								data-animate-effect="fadeInLeft">
+								<span class="heading-meta">Education</span>
+								<h2 class="colorlib-heading animate-box">Education</h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+								<div class="fancy-collapse-panel">
+									<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab" id="headingOne">
+												<h4 class="panel-title">
+													<a data-toggle="collapse" data-parent="#accordion"
+														href="#collapseOne" aria-expanded="true"
+														aria-controls="collapseOne">Coding Dojo (2019)
+													</a>
+												</h4>
+											</div>
+											<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+												aria-labelledby="headingOne">
+												<div class="panel-body">
+													<div class="row">
+														<div class="col-md-6">
+															<p>Completed an intense 14 week coding bootcamp.</p>
+														</div>
+														<div class="col-md-6">
+															<p>Learned multiple technologies such as: HTML, CSS,
+																Javascript, Angular, Nodejs, MongoDB, C#, SQL, SQLlite,
+																Razor, Python, Flask, Django, jQuery, and AJAX.</p>
+															<p>Triple Black Belt in Python, C#, and MEAN</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab" id="headingTwo">
+												<h4 class="panel-title">
+													<a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+														href="#collapseTwo" aria-expanded="false"
+														aria-controls="collapseTwo">George Mason University (2014)
+													</a>
+												</h4>
+											</div>
+											<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+												aria-labelledby="headingTwo">
+												<div class="panel-body">
+													<p>Certified Ethical Hacker course</p>
+													<ul>
+														<li>Learned network methodologies to protect systems from
+															external and internal threats.</li>
+														<li>Used Linux, Kali-Linux, John the Ripper, and Wireshark to
+															identify vulnerabilities.</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab" id="headingThree">
+												<h4 class="panel-title">
+													<a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+														href="#collapseThree" aria-expanded="false"
+														aria-controls="collapseThree">Dale Carnegie (2009)
+													</a>
+												</h4>
+											</div>
+											<div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+												aria-labelledby="headingThree">
+												<div class="panel-body">
+													<p>Took a strategic communications course. The course included how
+														to conduct, lead, and present in meetings.</p>
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab" id="headingFour">
+												<h4 class="panel-title">
+													<a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+														href="#collapseFour" aria-expanded="false"
+														aria-controls="collapseFour">Carnegie Mellon University (2009)
+													</a>
+												</h4>
+											</div>
+											<div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
+												aria-labelledby="headingFour">
+												<div class="panel-body">
+													<p>System Engineering course</p>
+													<ul>
+														<li>Learned how to apply Agile development methodologies to
+															various projects.</li>
+														<li>Learned how to break down systems systematically for System
+															Retirement.</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab" id="headingFive">
+												<h4 class="panel-title">
+													<a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+														href="#collapseFive" aria-expanded="false"
+														aria-controls="collapseFive">George Mason University (2008)
+													</a>
+												</h4>
+											</div>
+											<div id="collapseFive" class="panel-collapse collapse" role="tabpanel"
+												aria-labelledby="headingFive">
+												<div class="panel-body">
+													<p>Bachelors of Science in Decision Science and Management
+														Information Systems with a minor in Information Technology.</p>
+													<ul>
+														<li>Completed 120 credit hours.</li>
+														<li>Learned system engineering, system design, system analysis,
+															and project management methodologies.</li>
+														<li>Graduated Cumlaude</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab" id="headingSix">
+												<h4 class="panel-title">
+													<a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+														href="#collapseSix" aria-expanded="false"
+														aria-controls="collapseSix">Gar Field Senior High School (2004)
+													</a>
+												</h4>
+											</div>
+											<div id="collapseSix" class="panel-collapse collapse" role="tabpanel"
+												aria-labelledby="headingSix">
+												<div class="panel-body">
+													<p>Completed an Advanced Studies and International Baccalaureate
+														Diploma.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Certifications -->
+				<section class="colorlib-certifications" data-section="certifications">
+					<div class="colorlib-narrow-content">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+								data-animate-effect="fadeInLeft">
+								<span class="heading-meta">Certifications</span>
+								<h2 class="colorlib-heading animate-box">Professional certifications</h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+								<div class="project" style="background-image: url(images/aws_cert.PNG);">
+									<div class="desc">
+										<div class="con">
+											<h3><a
+													href="https://drive.google.com/file/d/1NvIIunhGLoezxYO5AZg0sI_Nuh61lfTC/view?usp=sharing">AWS
+													Cloud Practitioner</a>
+											</h3>
+											<span>Obtained through the AWS She Builds program </span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+									<div class="project" style="background-image: url(images/comptia.PNG);">
+										<div class="desc">
+											<div class="con">
+												<h3><a
+														href="https://drive.google.com/file/d/1BI-y1fD9pcx4cA-rVoSloOhMzs1oU5oi/view?usp=sharing">Security+</a>
+												</h3>
+											</div>
+										</div>
+									</div>
+								</div>
+				</section>
+				<!-- Experience 
+				<section class="colorlib-experience" data-section="experience">
+					<div class="colorlib-narrow-content">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+								data-animate-effect="fadeInLeft">
+								<span class="heading-meta">Experience</span>
+								<h2 class="colorlib-heading animate-box">Work Experience</h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="timeline-centered">
+									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+										<div class="timeline-entry-inner">
+
+											<div class="timeline-icon color-5">
+												<i class="icon-pen2"></i>
+											</div>
+
+											<div class="timeline-label">
+												<h2><a href="https://www.boozallen.com/">Staff Engineer at
+														Booz Allen Hamilton</a> <span>2022 - Present</span></h2>
+												<ul>
+													<li>Modernizing legacy applications from AngularJS to Angular or
+														React in an Agile process (1 month sprints)
+													</li>
+													<li>Debugging via Chrome Dev Tools and using VS Code as the IDE</li>
+													<li>Troubleshoot and fix bugs within the code
+													</li>
+													<li>Utilizing SharePoint for backend development</li>
+													<li>Using Jira for work item management and breakdown</li>
+													<li>Participating in Daily Scrum, Sprint planning and retrospectives
+													</li>
+												</ul>
+											</div>
+										</div>
+									</article>
+									<article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
+										<div class="timeline-entry-inner">
+											<div class="timeline-icon color-1">
+												<i class="icon-pen2"></i>
+											</div>
+											<div class="timeline-label">
+												<h2><a href="https://www.zekiah.com/">Full Stack Software Developer at
+														Zekiah Technologies Inc.</a> <span>2020-2022</span></h2>
+												<ul>
+													<li>Developing an application using an Angular frontend and a .NET
+														backend (using a Microservice architecture)
+														in an Agile process (2 week sprints)
+													</li>
+													<li>Using Swagger to generate Restful API routes
+													</li>
+													<li>Establish connections between multiple datasets in SQL Server
+														2019
+													</li>
+													<li>Using Entity Framework Core (EF Core) for Object Relational
+														Mapping
+													</li>
+													<li>Using Azure DevOps and Git for Source Code control
+													</li>
+													<li>Unit testing using Jest and Xunit
+													</li>
+													<li>
+														Fixed E2E tests in Cypress and Test Cafe
+													</li>
+													<li>Using RabbitMQ for Data Ingest services
+													</li>
+													<li>Migrating data in to S3 Object storage
+													</li>
+													<li>Leveraging Data Search and Analytics using ElasticSearch and
+														Kibana (for observability, indexing, template searches)
+													</li>
+													<li>Utilizing Cloud Computing Software with AWS and OpenShift
+													</li>
+													<li>
+														Participated in requirements gathering to solidify prerequisites
+														and determine best
+														technical solution to meet business needs via Sprint Flips and
+														Program Increment
+														planning (PI)
+													</li>
+												</ul>
+											</div>
+										</div>
+									</article>
+									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+										<div class="timeline-entry-inner">
+
+											<div class="timeline-icon color-2">
+												<i class="icon-pen2"></i>
+											</div>
+
+											<div class="timeline-label">
+												<h2><a href="https://www.codingdojo.com/arlington">Resident Developer at
+														Coding Dojo</a> <span>2019</span></h2>
+												<ul>
+													<li>Developed and deployed web apps from back-end to the front-end
+													</li>
+													<li>Engineered RESTful routes, CRUD operations, and API integration
+													</li>
+													<li>Established connections between multiple datasets in SQL and
+														NoSQL</li>
+												</ul>
+											</div>
+										</div>
+									</article>
+
+
+									<article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
+										<div class="timeline-entry-inner">
+											<div class="timeline-icon color-3">
+												<i class="icon-pen2"></i>
+											</div>
+											<div class="timeline-label">
+												<h2>Freelance Headhunter<span>&nbsp;2016-2019</span></h2>
+												<ul>
+													<li>Matched candidates to potential employers based upon their
+														education,
+														skill set, and experience. Used LinkedIn, Indeed, Careerbuilder,
+														and
+														various job hunting websites.</li>
+												</ul>
+											</div>
+										</div>
+									</article>
+
+									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+										<div class="timeline-entry-inner">
+											<div class="timeline-icon color-4">
+												<i class="icon-pen2"></i>
+											</div>
+											<div class="timeline-label">
+												<h2>Freelance Quality Assurance<span>&nbsp;2011-2016</span></h2>
+												<ul>
+													<li>Identified errors via Functional testing for various videogame
+														companies. Tested for graphical and logical errors within the
+														product. Communicated via email and an internal bug reporting
+														system. Dealt with Nondisclosure agreements.</li>
+												</ul>
+											</div>
+										</div>
+									</article>
+
+									<article class="timeline-entry animate-box" data-animate-effect="fadeInTop">
+										<div class="timeline-entry-inner">
+											<div class="timeline-icon color-5">
+												<i class="icon-pen2"></i>
+											</div>
+											<div class="timeline-label">
+												<h2><a href="https://www.boeing.com/">Analyst/Developer at The Boeing
+														Company</a> <span>2009-2010</span></h2>
+												<ul>
+													<li>Worked in an Agile development team on a 40 million dollar
+														project for Supplier Quality Systems. Developed a supplier
+														quality system for Boeing Commercial Airlines and Boeing Defense
+														Systems. Communicated with external and internal suppliers.
+														Scribed for the Bi-weekly meetings between the Vice Presidents
+														of Supplier Quality. Conducted lunch and learns to identify new
+														technologies (security tunneling schemas and Adobe Flex) that
+														would be used in our new system.</li>
+													<br>
+													<li>Wrote Visual Basic Scripts for Shop Floor
+														Control for the C-17 program. Communicated with System Managers
+														and customers for system retirement.</li><br>
+													<li>Learned how to make use of Desktop Service Requests with an
+														outside vendor (i.e Dell). Requests consisted of matching
+														hardware to customer (i.e. Engineers receiving engineering
+														laptops), specialized electronic devices, change in location of
+														vendors, hardware and software issues, network outages, and etc.
+														Completed requests via phone and email with the customer. If a
+														request was not completed, requests were manually modified
+														within the system.</li>
+												</ul>
+											</div>
+										</div>
+									</article>
+
+									<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+										<div class="timeline-entry-inner">
+											<div class="timeline-icon color-6">
+												<i class="icon-pen2"></i>
+											</div>
+											<div class="timeline-label">
+												<h2><a href="https://www2.gmu.edu/">Java Teacher Assistant at George
+														Mason University</a> <span>2006</span></h2>
+												<ul>
+													<li>Evaluated student programs for syntax and logic errors.</li>
+												</ul>
+											</div>
+										</div>
+									</article>
+
+									<article class="timeline-entry begin animate-box"
+										data-animate-effect="fadeInBottom">
+										<div class="timeline-entry-inner">
+											<div class="timeline-icon color-none">
+											</div>
+										</div>
+									</article>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				-->
+				<section class="colorlib-references" data-section="references">
+					<div class="colorlib-narrow-content">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+								data-animate-effect="fadeInLeft">
+								<span class="heading-meta">References</span>
+								<h2 class="colorlib-heading animate-box">My References</h2>
+							</div>
+						</div>
+					
+						<div class="row">
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+								<div class="project" style="background-image: url(images/female.png);">
+									<div class="desc">
+										<div class="con">
+											<h3><a href="https://www.linkedin.com/in/mgoode3/">Marisa Goode</a></h3>
+											<span>Lead Instructor at Coding Dojo</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+								<div class="project" style="background-image: url(images/male.png);">
+									<div class="desc">
+										<div class="con">
+											<h3><a href="mailto:dphelan2@yahoo.com">Doug
+													Phelan</a></h3>
+											<span>Senior developer</span>
+										</div>
+									</div>
+								</div>
+							</div>
+				</section>
+				<!--
+				<section class="colorlib-work" data-section="work">
+					<div class="colorlib-narrow-content">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+								data-animate-effect="fadeInLeft">
+								<span class="heading-meta">My Work</span>
+								<h2 class="colorlib-heading animate-box">Recent Work</h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+								<div class="project" style="background-image: url(images/natours.png);">
+									<div class="desc">
+										<div class="con">
+											<h3><a href="https://ksoliven.github.io/natours-responsive-development/">Natours using Advanced SASS
+													</a>
+											</h3>
+											<span>Technologies: HTML, CSS, and SASS</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+								<div class="project" style="background-image: url(images/trillo.png);">
+									<div class="desc">
+										<div class="con">
+											<h3><a href="https://ksoliven.github.io/trillo-flexbox-development/">Trillo using Flexbox
+												</a></h3>
+											<span>Technologies: HTML, CSS, and SASS</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
+								<div class="project"
+									style="background-image: url(images/nexter.png);">
+									<div class="desc">
+										<div class="con">
+											<h3><a href="https://ksoliven.github.io/nexter-css-grid/">Nexter using CSS grid</a>
+											</h3>
+											<span>Technologies: HTML, CSS, and SASS
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
+								<div class="project" style="background-image: url(https://i.ibb.co/kX9vd32/insta.png);">
+									<div class="desc">
+										<div class="con">
+											<h3><a href="https://github.com/ksoliven/Moxxi_fun">Instacart Checkout
+													Script</a></h3>
+											<span>Technologies: Python and Selenium</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+								<div class="project" style="background-image: url(https://i.ibb.co/bRTtYWw/TS.png);">
+									<div class="desc">
+										<div class="con">
+											<h3><a href="https://github.com/ksoliven/NumsToWords">Numbers To Words</a></h3>
+											<span>Technologies: Typescript and Angular.</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+								<div class="project" style="background-image: url(https://i.ibb.co/92jJwR0/elastic.png);">
+									<div class="desc">
+										<div class="con">
+											<h3><a href="https://github.com/ksoliven/Elastic_NEST_Painless">Elastic Nest CRUD</a></h3>
+											<span>Technologies: ElasticSearch, Painless, C#, and NEST</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 animate-box">
+								<p><a href="https://github.com/ksoliven"
+										class="btn btn-primary btn-lg btn-load-more">Additional Projects&nbsp;<i
+											class="icon-reload"></i></a></p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="colorlib-blog" data-section="orgs">
+					<div class="colorlib-narrow-content">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+								data-animate-effect="fadeInLeft">
+								<span class="heading-meta">Community</span>
+								<h2 class="colorlib-heading">Organizations</h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+								<div class="blog-entry">
+									<a href="https://www.autism-society.org/get-involved/national-autism-awareness-month/"
+										class="blog-img"><img src="images/autism.jpg" class="img-responsive"
+											alt="HTML5 Bootstrap Template by colorlib.com"></a>
+									<div class="desc">
+										<h3><a
+												href="https://www.autism-society.org/get-involved/national-autism-awareness-month/">Autism
+												Awareness</a></h3>
+										<p>I have family members who are Autistic, this society is definitely close to
+											my heart. Hopefully, one day I'll be able to develop a Web app for them.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInRight">
+								<div class="blog-entry">
+									<a href="https://lionsclubs.org/en" class="blog-img"><img src="images/lions.png"
+											class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
+									<div class="desc">
+										<h3><a href="https://lionsclubs.org/en">Lions Club</a></h3>
+										<p>I've been part of this organization since High School. The club has helped
+											countless people and I'm a firm believer of giving back to your community.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+								<div class="blog-entry">
+									<a href="https://www.womenintechnology.org/" class="blog-img"><img
+											src="images/wit.jpg" class="img-responsive"
+											alt="HTML5 Bootstrap Template by colorlib.com"></a>
+									<div class="desc">
+										<h3><a href="https://www.womenintechnology.org/">Women in Technology</a></h3>
+										<p>I've attended the events since my days at Boeing. The mentorship program is
+											amazing and empowers women to pursue STEM jobs.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 animate-box">
+								<p><a href="https://en.wikipedia.org/wiki/Category:Lists_of_organizations"
+										class="btn btn-primary btn-lg btn-load-more">Additional Organizations
+										<i class="icon-reload"></i></a></p>
+							</div>
+						</div>
+					</div>
+				</section>
+			-->
+
+				<section class="colorlib-contact" data-section="contact">
+					<div class="colorlib-narrow-content">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
+								data-animate-effect="fadeInLeft">
+								<span class="heading-meta">Get in Touch</span>
+								<h2 class="colorlib-heading">Contact</h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-5">
+								<div class="colorlib-feature colorlib-feature-sm animate-box"
+									data-animate-effect="fadeInLeft">
+									<div class="colorlib-icon">
+										<i class="icon-globe-outline"></i>
+									</div>
+									<div class="colorlib-text">
+										<p><a href="mailto:aaftab19.ali@gmail.com">Send me an email</a></p>
+									</div>
+								</div>
+
+								<div class="colorlib-feature colorlib-feature-sm animate-box"
+									data-animate-effect="fadeInLeft">
+									<div class="colorlib-icon">
+										<i class="icon-map"></i>
+									</div>
+									<div class="colorlib-text">
+										<p>Maharastra,Pune</p>
+									</div>
+								</div>
+
+								<div class="colorlib-feature colorlib-feature-sm animate-box"
+									data-animate-effect="fadeInLeft">
+									<div class="colorlib-icon">
+										<i class="icon-phone"></i>
+									</div>
+									<div class="colorlib-text">
+										<p><a href="tel:91+976-663-8824">Give me a call</a></p>
+									</div>
+								</div>
+							</div>
+							<!-- Implemented Captcha and Emailjs library -->
+							<div class="col-md-7 col-md-push-1">
+								<div class="row">
+									<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box"
+										data-animate-effect="fadeInRight">
+										<form action="?" method="POST" id="contact-form">
+											<div class="form-group">
+												<input type="hidden" name="contact_number">
+												<input type="text" name="user_name" id="user_name" class="form-control"
+													placeholder="Name" required>
+											</div>
+											<div class="form-group">
+												<input type="text" name="user_email" id="user_email"
+													class="form-control" placeholder="Email" required>
+											</div>
+											<div class="form-group">
+												<textarea name="message" id="message" cols="30" rows="7"
+													class="form-control" placeholder="Message" required></textarea>
+											</div>
+											<div class="form-group">
+												<input type="submit" class="btn btn-primary btn-send-message"
+													value="Send">
+											</div>
+											<!-- Captcha needs to implemented here as it's an outer div -->
+											<div class="g-recaptcha"
+												data-sitekey="6LcdtughAAAAAAUkgAF9Ul31zLvVhVpobd-SKjaw"></div>
+										</form>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+
+			</div><!-- end:colorlib-main -->
+		</div><!-- end:container-wrap -->
+	</div><!-- end:colorlib-page -->
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Owl carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Counters -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- MAIN JS -->
+	<script src="js/main.js"></script>
+	<!-- Vanilla toast js -->
+	<script src="js/vanilla-toast.js"></script>
+
+</body>
+
+</html>
